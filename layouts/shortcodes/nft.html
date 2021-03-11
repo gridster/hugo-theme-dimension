@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+    <div style="margin: auto; padding: 10px; display:inline;">
+        <nft-card contractAddress="{{ .Get "contractAddress" }}"  tokenId="{{ .Get "tokenId" }}" referrerAddress="https://www.teriell.de" width="100%"> </nft-card> 
+    </div>
+{{ else }}
+    <div style="margin: auto; padding: 10px; display:inline;">
+        <nft-card contractAddress="{{ .Get 0 }}"  tokenId="{{ .Get 1 }}"  referrerAddress="https://www.teriell.de" width="100%"> </nft-card> 
+    </div>
+{{ end }}
